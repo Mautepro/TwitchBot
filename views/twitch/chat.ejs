@@ -1,17 +1,13 @@
 <%- include("../partials/_header"); -%>
 	<div class="panel panel-default">
-		<h1 class="panel-heading">Chat of Streamer</h1>
+		<h1 class="panel-heading">Chat-Bot</h1>
 		<div class="panel-body">
-			<form action="/twitch/chat" method="POST">
-				<label for="channel">Channel name</label>
-				<input type="text" name="channel">
-				<div>
-					<button type="submit" id="openChat" class="btn btn-primary">Open Chat</button>
-				</div>
-				<!--button type="button" id="openChat" class="btn btn-primary">Open Chat</!--button-->
-			</form>
+			<form action="<%=defaultUrl%>" method="POST" id='openchat-container'>
+				<button type="submit" id="openchat-button" onclick="document.forms[0].action +='/'+this.name;return true;" class="btn btn-primary" name="open">Open Chat (run bot)</button>
+				<button type="submit" id="closechat-button" onclick="document.forms[0].action +='/'+this.name;return true;" class="btn btn-primary" name="close">Close (Stop bot)</button>
+				<button type="submit" id="reconnect-button" onclick="document.forms[0].action +='/'+this.name;return true;" class="btn btn-primary" name="reconnect" disabled>Reconnect (new Channel)</button>
 		</div>
+		</form>
+		<div id='message-container'></div>
 	</div>
-
-	<!--a id="startChat">Start chat</!--a>
-	<script-- src="/test.js"></scrip-->
+	</div>

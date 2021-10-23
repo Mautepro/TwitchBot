@@ -1,0 +1,30 @@
+<%- include("../partials/_header"); -%>
+	<div class="panel panel-default">
+		<h1 class="panel-heading">Settings</h1>
+		<div class="panel-body">
+			<form action="/settings" method="POST" id="here">
+				<div class="form-row align-items-center">
+					<div class="col-auto">
+						<label class="sr-only" for="inlineFormInputGroup">
+							<%=currentChannel%>
+						</label>
+						<div class="input-group mb-2">
+							<label for="inlineFormInputGroup">Channel</label>
+							<input name="channel" type="text" class="form-control" id="inlineFormInputGroup" placeholder="#<%=currentChannel%>">
+						</div>
+					</div>
+					<div class="col-auto">
+						<div class="form-check mb-2">
+							<input class="form-check-input" type="checkbox" name="sureCheckbox" id="autoSizingCheck">
+							<label class="form-check-label" for="autoSizingCheck">
+								sure?
+							</label>
+						</div>
+					</div>
+					<div class="col-auto">
+						<button type="submit" class="btn btn-primary mb-2">Submit</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
