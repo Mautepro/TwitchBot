@@ -5,7 +5,7 @@ const fs = require('fs');
 const tmi = require('tmi.js');
 const log = require('log-to-file');
 
-const emotesConf = JSON.parse(fs.readFileSync('emotes.json'));
+const emotesConf = JSON.parse(fs.readFileSync('./config/emotes.json'));
 
 
 const logDir = "./logs/" + `${process.env.TWITCH_CHANNEL}`;
@@ -68,3 +68,5 @@ client.on('message', (channel, userInfo, message, self) => {
 		}
 	}
 });
+
+module.exports = 3;
