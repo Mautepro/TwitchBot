@@ -18,11 +18,12 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(session({
+/*app.use(session({
 	secret: "asdkjlkj-herF19al!2L2)lex",
 	resave: false,
 	saveUninitialized: false
-}));
+}));*/
+
 
 app.use("/", require('./routes/web'));
 app.use("/api", require('./routes/api'));
