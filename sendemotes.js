@@ -32,7 +32,7 @@ sendEmote = function(emote) {
 	ping();
 
 	if(emotesConf[emote.toLowerCase()])
-		client.say(channel, emotesConf[emote.toLowerCase()]);
+		client.say(channel, emotesConf[emote.toLowerCase()]).catch((err) => console.log(err));
 };
 
 module.exports = function(emote) {
